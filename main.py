@@ -20,11 +20,11 @@ def revalidate():
         errors_file_path = os_manager.get_errors_file_path()  # It will download the new error file.
         revalidate()
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
+def main():
+    global web, seis_file_path, errors_file_path
     web = WebbotManager(Settings().download_path)
     web.download_seis()
+    web.cleanup_seis()
     seis_file_path = os_manager.get_seis_file_path()
     pandas_manager.stash_case_manager(seis_file_path)
     web.sign_in_to_caaspp()
@@ -34,3 +34,8 @@ if __name__ == '__main__':
         revalidate()
     os_manager.cleanup()
     EmailManager().clear_emails()
+
+
+# Press the green button in the gutter to run the script.
+if __name__ == '__main__':
+    main()

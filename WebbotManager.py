@@ -31,12 +31,12 @@ class WebbotManager:
         sleep(30)
         self.web.click("XLSX", number=1)
 
-    # TODO: - SEIS Cleanup
     def cleanup_seis(self):
-        self.web.go_to("https://seis.org/reports/toms")
-        self.web.type(self._passwords.seis_login_information['username'], id="username")
-        self.web.type(self._passwords.seis_login_information['password'], id="password")
-        self.web.click("Login")
+        """
+        Deletes the SEIS report that was just downloaded.
+        """
+        self.web.click(classname='seis-icon-delete')
+        self.web.click(xpath="/html/body/div[3]/div/div/div[3]/button[1]")
 
     def sign_in_to_caaspp(self):
         """
