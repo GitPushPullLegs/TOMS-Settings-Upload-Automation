@@ -1,10 +1,12 @@
-from typing import Dict, Any, Union
-import pandas as pd
-from Settings import Settings
-from OSManager import OSManager
-from datetime import datetime
 import re
+from datetime import datetime
+from typing import Dict, Any, Union
+
 import numpy
+import pandas as pd
+
+from OSManager import OSManager
+from Settings import Settings
 
 
 class ErrorData:

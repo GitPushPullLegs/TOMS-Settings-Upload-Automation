@@ -1,10 +1,11 @@
-from glob import glob
 import os
+from datetime import datetime
+from glob import glob
 from os.path import basename
-from Settings import Settings
 from time import sleep
 from zipfile import ZipFile
-from datetime import datetime
+
+from Settings import Settings
 
 
 class OSManager:

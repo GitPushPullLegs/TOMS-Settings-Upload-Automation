@@ -1,12 +1,14 @@
-import imapclient
 import re
-import sys
 import smtplib
+import sys
+from datetime import datetime
 from email.message import EmailMessage
 from time import sleep
-from datetime import datetime
-from Settings import Passwords
+
+import imapclient
+
 from NetworkManager import NetworkManager
+from Settings import Passwords
 
 
 class EmailManager:

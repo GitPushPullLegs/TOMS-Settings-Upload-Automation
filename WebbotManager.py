@@ -1,9 +1,9 @@
+from datetime import datetime, timedelta
+from sys import exit
+from time import sleep
 from webbot import Browser
 from EmailManager import EmailManager
 from Settings import Passwords
-from time import sleep
-from datetime import datetime, timedelta
-from sys import exit
 
 
 class WebbotManager:

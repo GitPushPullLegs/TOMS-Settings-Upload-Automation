@@ -1,8 +1,8 @@
-from WebbotManager import WebbotManager
-from Settings import Settings
+from EmailManager import EmailManager
 from OSManager import OSManager
 from PandasManager import PandasManager
-from EmailManager import EmailManager
+from Settings import Settings
+from WebbotManager import WebbotManager
 
 web = None
 os_manager = OSManager()
